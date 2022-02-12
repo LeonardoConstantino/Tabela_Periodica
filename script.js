@@ -75,50 +75,54 @@ const MOSTRA_ELEMENTOS_NA_TELA = (elemento, dados) => {
         </span>
     `
     
-    if (elemento>55 && elemento<=70) {
-        elementos[elemento+32].innerHTML = `
-        <h2>${dados[elemento].numeroAtomico}</h2>
-        <p>${dados[elemento].simbolo}</p>
+    if (elemento>55 && elemento<=72) {
+        // elementos[elemento].style.backgroundColor = "red"
+        elementos[elemento].innerHTML = `
+        <h2>${dados[elemento+15].numeroAtomico}</h2>
+        <p>${dados[elemento+15].simbolo}</p>
             <span class="tooltip">
                 <span class="tooltiptext">
-                    Nome: ${dados[elemento].nome}</br>
-                    Massa atômica: ${dados[elemento].massaAtomica}
+                    Nome: ${dados[elemento+15].nome}</br>
+                    Massa atômica: ${dados[elemento+15].massaAtomica}
                 </span>
             </span>
         `
     }
     if (elemento>72 && elemento<=87) {
-        elementos[elemento+30].innerHTML = `
-        <h2>${dados[elemento].numeroAtomico}</h2>
-        <p>${dados[elemento].simbolo}</p>
+        // elementos[elemento].style.backgroundColor = "#2596be"
+        elementos[elemento].innerHTML = `
+        <h2>${dados[elemento+30].numeroAtomico}</h2>
+        <p>${dados[elemento+30].simbolo}</p>
             <span class="tooltip">
                 <span class="tooltiptext">
-                    Nome: ${dados[elemento].nome}</br>
-                    Massa atômica: ${dados[elemento].massaAtomica}
+                    Nome: ${dados[elemento+30].nome}</br>
+                    Massa atômica: ${dados[elemento+30].massaAtomica}
                 </span>
             </span>
         `
     }
     if (elemento>87 && elemento<=102) {
-        elementos[elemento-32].innerHTML = `
-        <h2>${dados[elemento].numeroAtomico}</h2>
-        <p>${dados[elemento].simbolo}</p>
+        // elementos[elemento].style.backgroundColor = "#4705BB"
+        elementos[elemento].innerHTML = `
+        <h2>${dados[elemento-32].numeroAtomico}</h2>
+        <p>${dados[elemento-32].simbolo}</p>
             <span class="tooltip">
                 <span class="tooltiptext">
-                    Nome: ${dados[elemento].nome}</br>
-                    Massa atômica: ${dados[elemento].massaAtomica}
+                    Nome: ${dados[elemento-32].nome}</br>
+                    Massa atômica: ${dados[elemento-32].massaAtomica}
                 </span>
             </span>
         `
     }
     if (elemento>102 && elemento<=117) {
-        elementos[elemento-30].innerHTML = `
-        <h2>${dados[elemento].numeroAtomico}</h2>
-        <p>${dados[elemento].simbolo}</p>
+        elementos[elemento].style.backgroundColor = "#AE21A2"
+        elementos[elemento].innerHTML = `
+        <h2>${dados[elemento-15].numeroAtomico}</h2>
+        <p>${dados[elemento-15].simbolo}</p>
             <span class="tooltip">
                 <span class="tooltiptext">
-                    Nome: ${dados[elemento].nome}</br>
-                    Massa atômica: ${dados[elemento].massaAtomica}
+                    Nome: ${dados[elemento-15].nome}</br>
+                    Massa atômica: ${dados[elemento-15].massaAtomica}
                 </span>
             </span>
         `
