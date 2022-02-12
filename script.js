@@ -115,7 +115,7 @@ const MOSTRA_ELEMENTOS_NA_TELA = (elemento, dados) => {
         `
     }
     if (elemento>102 && elemento<=117) {
-        elementos[elemento].style.backgroundColor = "#AE21A2"
+        //elementos[elemento].style.backgroundColor = "#AE21A2"
         elementos[elemento].innerHTML = `
         <h2>${dados[elemento-15].numeroAtomico}</h2>
         <p>${dados[elemento-15].simbolo}</p>
