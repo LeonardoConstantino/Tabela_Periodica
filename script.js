@@ -67,39 +67,69 @@ const MOSTRA_ELEMENTOS_NA_TELA = (elemento, dados) => {
     elementos[elemento].innerHTML = `
     <h2>${dados[elemento].numeroAtomico}</h2>
     <p>${dados[elemento].simbolo}</p>
-    <span>
-    <span class="tooltip">
-        <span class="tooltiptext">
-            Nome: ${dados[elemento].nome}</br>
-            Massa atômica: ${dados[elemento].massaAtomica}
+        <span class="tooltip">
+            <span class="tooltiptext">
+                Nome: ${dados[elemento].nome}</br>
+                Massa atômica: ${dados[elemento].massaAtomica}
+            </span>
         </span>
-    </span></span>
     `
+    
+    if (elemento>55 && elemento<=70) {
+        elementos[elemento+32].innerHTML = `
+        <h2>${dados[elemento].numeroAtomico}</h2>
+        <p>${dados[elemento].simbolo}</p>
+            <span class="tooltip">
+                <span class="tooltiptext">
+                    Nome: ${dados[elemento].nome}</br>
+                    Massa atômica: ${dados[elemento].massaAtomica}
+                </span>
+            </span>
+        `
+    }
+    if (elemento>72 && elemento<=87) {
+        elementos[elemento+30].innerHTML = `
+        <h2>${dados[elemento].numeroAtomico}</h2>
+        <p>${dados[elemento].simbolo}</p>
+            <span class="tooltip">
+                <span class="tooltiptext">
+                    Nome: ${dados[elemento].nome}</br>
+                    Massa atômica: ${dados[elemento].massaAtomica}
+                </span>
+            </span>
+        `
+    }
+    if (elemento>87 && elemento<=102) {
+        elementos[elemento-32].innerHTML = `
+        <h2>${dados[elemento].numeroAtomico}</h2>
+        <p>${dados[elemento].simbolo}</p>
+            <span class="tooltip">
+                <span class="tooltiptext">
+                    Nome: ${dados[elemento].nome}</br>
+                    Massa atômica: ${dados[elemento].massaAtomica}
+                </span>
+            </span>
+        `
+    }
+    if (elemento>102 && elemento<=117) {
+        elementos[elemento-30].innerHTML = `
+        <h2>${dados[elemento].numeroAtomico}</h2>
+        <p>${dados[elemento].simbolo}</p>
+            <span class="tooltip">
+                <span class="tooltiptext">
+                    Nome: ${dados[elemento].nome}</br>
+                    Massa atômica: ${dados[elemento].massaAtomica}
+                </span>
+            </span>
+        `
+    }
 }
 
 const PEGA_ELEMENTOS = dados => {
     for (var i = 0; i<dados.length; i++){
         MOSTRA_ELEMENTOS_NA_TELA(i, dados)
-        if (i>55 && i<=70) {
-            // elementos[i].style.backgroundColor = "red"
-            MOSTRA_ELEMENTOS_NA_TELA(i, dados)
-        }
-        if (i>72 && i<=87) {
-            // elementos[i].style.backgroundColor = "blue"
-        MOSTRA_ELEMENTOS_NA_TELA(i, dados)
-        }
-        if (i>87 && i<=102) {
-            // elementos[i].style.backgroundColor = "aqua"
-        MOSTRA_ELEMENTOS_NA_TELA(i, dados)
-        }
-        if (i>102 && i<=117) {
-            // elementos[i].style.backgroundColor = "crimson"
-        MOSTRA_ELEMENTOS_NA_TELA(i, dados)
-        }
     }
-
-    
-    console.log(dados[1])
+    // console.log(dados[1])
 }
 
 
